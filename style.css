@@ -18,3 +18,4 @@ button:focus-visible,a:focus-visible,input:focus-visible{outline:2px solid var(-
 .task-actions button{font-size:10px}
 .cabinet-bottom{font-size:9px}
 @media(max-width:700px){.streak-chip small{max-width:110px;white-space:normal;line-height:1.25;overflow:visible;text-overflow:clip;font-size:8px}.points-chip small{font-size:8px}.powerup-bar{font-size:9px}}
+@media(max-width:700px){.streak-chip small,.points-chip small{font-size:9px}.streak-chip small{max-width:112px}.powerup-bar>span:first-child{min-width:100%;font-size:9px}.powerup-bar button{font-size:9px}}
