@@ -13,7 +13,7 @@
     <a class="brand" href="#top" aria-label="Sidequest home"><span class="brand-mark">✳</span> SIDEQUEST<span class="brand-dot">.</span></a>
     <div class="retention-bar" aria-label="Your progress">
       <div class="streak-chip"><span class="flame">♨</span><span><b id="streakCount">0 day streak</b><small id="streakStatus">Complete a task today to start</small></span></div>
-      <div class="points-chip"><span>✦</span><b id="pointCount">0</b><small>POINTS EARNED</small></div>
+      <div class="token-chip"><span>▣</span><span><b id="tokenCount">0</b><small>GAME TOKENS</small></span></div>
     </div>
     <button class="sound-toggle" id="soundToggle" aria-label="Toggle sound" title="Toggle sound">♫ <span>sound off</span></button>
   </header>
@@ -23,21 +23,21 @@
       <div class="hero-copy">
         <div class="eyebrow"><span>01</span> Take a moment to reset</div>
         <h1>Make a plan.<br><span>Then take a break.</span></h1>
-        <p class="intro">A small arcade break for a full day. Take a breath, decide what comes next, and earn points as you make progress.</p>
+        <p class="intro">A small arcade break for a full day. Take a breath, decide what comes next, and earn points and a game token whenever you complete a quest.</p>
         <div class="steps" aria-label="How it works"><div class="step active"><b>01</b><span>Take a look</span></div><i></i><div class="step"><b>02</b><span>Make a plan</span></div><i></i><div class="step"><b>03</b><span>Play for a while</span></div></div>
         <button class="primary-button" id="planButton">Make a quick plan <span>↗</span></button>
         <div class="microcopy">You can take a short break, make a plan, and pick things back up when you’re ready.</div>
       </div>
       <div class="game-wrap">
         <div class="cabinet-top"><span><i class="live-dot"></i> Your arcade break</span><span>A moment for you <b>●</b></span></div>
-        <div class="powerup-bar"><span>Save 25 points to add a shield to your next game</span><span>You have <b id="shieldCount">0</b> shields</span><button id="buyShield">Buy a shield · 25 ✦</button></div>
+        <div class="powerup-bar"><span>Shields cost 25 points. You have <b id="pointCount">0</b> points.</span><span>You have <b id="shieldCount">0</b> shields.</span><button id="buyShield">Buy a shield · 25 ✦</button></div>
         <div class="game-screen" id="gameScreen">
           <canvas id="game" aria-label="Arcade game. Use arrow keys or touch to dodge the incoming sparks." role="img"></canvas>
           <div class="game-overlay" id="gameOverlay">
             <div class="pixel-stamp">SIDEQUEST<br>ARCADE GAME</div>
             <div class="overlay-title">SPARK<br>RUNNER</div>
-            <p>Move left and right to dodge the sparks. See how long you can stay in the game.</p>
-            <button class="start-button" id="startButton"><span>▶</span> Start the game <small>TAKE A MOMENT TO RESET</small></button>
+            <p>Complete a quest to earn one game token. Each run uses one token. Move left and right to dodge the sparks.</p>
+            <button class="start-button" id="startButton"><span>▣</span> Complete a quest to play <small>ONE TOKEN IS NEEDED FOR EACH RUN</small></button>
           </div>
           <div class="hud"><span>Time played: <b id="timer">00:00</b></span><span>Your best: <b id="best">00:00</b></span><span>Points this round: <b id="score">000</b></span></div>
           <div class="touch-pad" aria-label="Touch movement controls"><button data-dir="left" aria-label="Move left">←</button><button data-dir="right" aria-label="Move right">→</button></div>
@@ -49,12 +49,12 @@
     </section>
 
     <section class="plan-section" id="planner">
-      <div class="section-heading"><div><div class="eyebrow"><span>02</span> Make a little room in your day</div><h2>What would you like to work on next?</h2></div><p>Write down what’s on your mind, then earn 10 points the first time you complete each task.</p></div>
+      <div class="section-heading"><div><div class="eyebrow"><span>02</span> Make a little room in your day</div><h2>What would you like to work on next?</h2></div><p>Write down what’s on your mind. Each completed quest earns 10 points and one game token.</p></div>
       <div class="planner-card">
         <div class="planner-top"><span>Your task list</span><span id="taskCount">Your list is empty</span></div>
         <div class="task-input-row"><label class="sr-only" for="taskInput">Add a task</label><input id="taskInput" maxlength="48" placeholder="What would you like to get done?"><button id="addTask">Add <span>＋</span></button></div>
         <div id="taskList" class="task-list"><div class="empty-state"><span>✳</span> Your quest log is clear. Add one small thing to begin.</div></div>
-        <div class="planner-footer"><span><b>A small tip</b> Start with one manageable task, then add more whenever you like.</span><button id="playButton" class="play-button" disabled >I’ve made a plan, so I’m ready to play <span>↗</span></button></div>
+        <div class="planner-footer"><span><b>A small tip</b> Start with one manageable task, then add more whenever you like.</span><button id="playButton" class="play-button" disabled>Complete a quest to earn a game token</button></div>
       </div>
     </section>
     <footer><span class="brand small"><span class="brand-mark">✳</span> SIDEQUEST<span class="brand-dot">.</span></span><span>Take a break and come back to what matters.</span><span>A little break can make the rest of the day easier. <b>✦</b></span></footer>
