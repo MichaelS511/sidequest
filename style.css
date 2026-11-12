@@ -8,3 +8,13 @@
 
 button:focus-visible,a:focus-visible,input:focus-visible{outline:2px solid var(--lime);outline-offset:3px}
 .task-input-row input:focus{outline:2px solid var(--purple);outline-offset:2px;box-shadow:none}
+/* Keep the compact arcade labels readable at a glance. */
+.hud{font-size:9px;align-items:flex-start;gap:6px}
+.hud span{display:flex;flex-direction:column;align-items:center;gap:2px;text-align:center}
+.hud b{margin-left:0}
+.powerup-bar{font-size:9px}
+.planner-top{font-size:10px}
+.planner-footer{font-size:10px}
+.task-actions button{font-size:10px}
+.cabinet-bottom{font-size:9px}
+@media(max-width:700px){.streak-chip small{max-width:110px;white-space:normal;line-height:1.25;overflow:visible;text-overflow:clip;font-size:8px}.points-chip small{font-size:8px}.powerup-bar{font-size:9px}}
